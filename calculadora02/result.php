@@ -12,9 +12,9 @@ function quadrilatero($ladoA, $ladoB){
 }
 
 function triangulo($base, $altura){
-    return $base * $altura;
+    return ($base * $altura) /2;
 }
-''
+
 function equacao($a, $b){
     if ($a == 0) {
         if ($b == 0) {
