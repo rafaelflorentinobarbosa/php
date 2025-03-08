@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <form action="result.php" method="post">
+        <label for="x">Informe o valor de "X"</label><br />
+        <input type="text" name="x"> <br /><br />
+
+        <label for="y">Informe o valor de "Y"</label><br />
+        <input type="text" name="y"> <br /><br />
+
+        <label for="calculo">Informe o calculo desejado:</label><br />
+        <select name="calculo">
+            <option value="quadrilátero">Quadrilátero</option>
+            <option value="triângulo">Triângulo</option>
+            <option value="equação">Equação</option>
+        </select><br /><br />
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>
