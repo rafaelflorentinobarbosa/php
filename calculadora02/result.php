@@ -4,41 +4,27 @@
   que o mesmo escolha um dos seguintes calculos:
     - Área do Quadrilatero
     - Área do Triangulo
-    - Equação do 1° grau
+    - Equação do 1° grau a*x+b=0
   Após o usuário esolher o calculo, o programa retorna o resultado desejado.
 */
-function quadrilatero($ladoA, $ladoB){
-    return $ladoA * $ladoB;
-}
 
-function triangulo($base, $altura){
-    return ($base * $altura) /2;
-}
+    // importando as funções de outro arquivo
+    include "funcoes.php";
 
-function equacao($a, $b){
-    if ($a == 0) {
-        if ($b == 0) {
-            return "A equação tem infinitas soluções.";
-        } else {
-            return "A equação não tem solução.";
-        }
-    }  
-    return -$b / $a;  //$x = -$b / $a;
-}
     // Declaração de vaiáveis
-    $x = str_replace(",",".",$_POST['x']);
-    $y = str_replace(",",".",$_POST['y']);
+    $a = str_replace(",",".",$_POST['a']);
+    $b = str_replace(",",".",$_POST['b']);
     $calculo = $_POST['calculo'];
 
     switch($calculo){
         case "quadrilátero":
-            echo quadrilatero($x,$y);
+            echo "Área do quadrilatero é: " . quadrilatero($a,$b);
             break;
         case "triângulo":
-            echo triangulo($x,$y);
+            echo "Área do triângulo é: " . triangulo($a,$b);
             break;
         case "equação":
-            echo equacao($x,$y);
+            echo "Equação do 1° Grau é: " . equacao($a,$b);
             break;
         }
 ?>
