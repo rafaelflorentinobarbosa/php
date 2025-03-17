@@ -16,14 +16,14 @@
 
     <?php
         // Função para calcular o Fibonacci
-        function calcularFibonnaci($numero){
-            return $numero <= 1 ? $numero : calcularFibonnaci($numero - 1) + calcularFibonnaci($numero - 2);
+        function calcularFibonacci($numero){
+            return $numero <= 1 ? $numero : calcularFibonacci($numero - 1) + calcularFibonacci($numero - 2);
         }
 
         // Gerar a sequência de Fibonacci até o número informado
         function gerarFibonnaci($numero){         
             for($i = 0; $i <= $numero; $i++){
-                echo calcularFibonnaci($i). " ";
+                echo calcularFibonacci($i). " ";
             }           
         }
 
@@ -32,7 +32,7 @@
             $numero = $_POST['numero'];
 
             // Executando a função
-            echo "<h2> O fibonnaci de $numero é: " . calcularFibonnaci($numero)."! </h2>";
+            echo "<h2> O fibonnaci de $numero é: " . calcularFibonacci($numero)."! </h2>";
 
             // Executando a função sequência
             gerarFibonnaci($numero);

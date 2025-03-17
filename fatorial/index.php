@@ -20,7 +20,7 @@
         }
 
         if($_SERVER["REQUEST_METHOD"]== 'POST'){
-            // declarando variaveis
+            // Declarando variaveis
             $numero = $_POST['numero'];
 
             // Executando a função
